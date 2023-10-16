@@ -19,12 +19,12 @@ app.use(express.static('public'));
 
 app.use(router);
 
-app.get('/home', (request, response) => {
-    return response.render('home')
-})
+// app.get('/home', (request, response) => {
+//     return response.render('home')
+// })
 
-app.get('/cadastro', (request, response) => {
-    return response.render('cadastro')
-})
+// app.get('/cadastro', (request, response) => {
+//     return response.render('cadastro')
+// })
 
-app.listen(3334, console.log("Servidor ta pegando na porta 3334 🥰🌳🌊💗"));
+app.listen(3337, console.log("Servidor está rodando na porta 3337 🥰🌳🌊💗"));

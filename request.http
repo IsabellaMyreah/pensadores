@@ -2,8 +2,8 @@ POST http://localhost:3337/users
 content-type: application/json
 
 {
-    "name": "Bella",
-    "email": "isabella@isabella.com",
+    "name": "George",
+    "email": "george@george.com",
     "password": "123456788",
     "confirm_password": "123456788"
 }
@@ -15,23 +15,23 @@ GET http://localhost:3337/users
 
 ###
 
-GET http://localhost:3337/users/5
+GET http://localhost:3337/users/7
 
 
 ###
-PUT http://localhost:3337/users/5
+PUT http://localhost:3337/users/7
 content-type: application/json
 
 {
-    "name": "teste5",
-    "email": "aaa@aaa",
+    "name": "Bradley",
+    "email": "bradley@bradley",
     "password": "123456788",
     "confirm_password": "123456788"
 }
 
 ###
 
-DELETE  http://localhost:3337/users/5
+DELETE  http://localhost:3337/users/6
 
 ###
 
@@ -39,8 +39,8 @@ POST http://localhost:3337/thoughts
 content-type: application/json
 
 {
-    "title": "Pensamento 03",
-    "description": "Pensamento do dia"
+    "title": "Pensamento 01",
+    "description": "Vai dar certo!"
 }
 
 ###
@@ -49,18 +49,18 @@ GET http://localhost:3337/thoughts
 
 ###
 
-GET http://localhost:3337/thoughts/
+GET http://localhost:3337/thoughts/6
 
 ###
 
-PUT http://localhost:3337/thoughts/4
+PUT http://localhost:3337/thoughts/6
 content-type: application/json
 
 {
-    "title": "Deu certo!",
-    "description": "Pensamento do dia"
+    "title": "Pensamento 02",
+    "description": "Eh, mais ou menos"
 }
 
 ###
 
-DELETE  http://localhost:3337/thoughts/1
+DELETE  http://localhost:3337/thoughts/6

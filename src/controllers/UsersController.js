@@ -45,7 +45,7 @@ module.exports = {
             }
         )
 
-        return response.json({message: "Usuario selecionado foi atualizado com sucesso"})
+        return response.json({message: "Usuário selecionado foi atualizado com sucesso! Viva!🌼"})
     },
 
     async deleteUser(request, response){
@@ -53,6 +53,6 @@ module.exports = {
 
         const user = await User.destroy({ where: { id: id}});
 
-        return response.json({ message: "Usuario deletado com sucesso "})
+        return response.json({ message: "Usuário deletado com sucesso!🐠"})
     }
 }

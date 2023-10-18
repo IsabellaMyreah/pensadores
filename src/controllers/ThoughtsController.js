@@ -3,6 +3,11 @@ const Thought = require("../model/Thought");
 
 module.exports = {
 
+// Função responsável por renderizar a página de dashboard
+async dashboard(reuqest, response){
+    return response.render("thoughts/dashboard");
+},
+
 async createThought(request, response) {
     const { title, description } = request.body
     const thoughts = await Thought.create({title, description});
@@ -38,7 +43,7 @@ async updateThoughts (request, response){
         }
     )
 
-    return response.json({message: "Usuario selecionado foi atualizado com sucesso"})
+    return response.json({message: "Pensamento selecionado foi atualizado com sucesso!🥰"})
 },
 
 
@@ -47,7 +52,7 @@ async deleteThoughts(request, response){
 
     const thought = await Thought.destroy({ where: { id: id}});
 
-    return response.json({ message: "Usuario deletado com sucesso "})
+    return response.json({ message: "Pensamento deletado com sucesso!🐪"})
 }
 
 }

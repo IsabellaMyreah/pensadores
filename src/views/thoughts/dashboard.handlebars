@@ -3,10 +3,9 @@
         <div class="title">
             <h2>Dashboard</h2>
         </div>
-    
 
         <div class="button-create">
-            <a href="/thought-create">Criar Pensamento</a>
+            <a href="/thoughts-create">Criar Pensamento</a>
         </div>
     </div>
 
@@ -14,14 +13,19 @@
         <div class="subtitle">
             <p>Seus pensamentos:</p>
         </div>
+
+    {{#each thoughts}}
         <div class="thoughts-list">
-            <p>PHP é melhor que NodeJS</p>
+            <p>{{ this.description }}</p>
+    
 
             <div class="buttons">
-                <a href="">Editar</a>
-                <a href="">Excluir</a>
+                <a href="/thoughts/edit/{{ this.id }}">Editar</a>
+                <form action="/thoughts/remove/{{ this.id }}" method="POST">
+                    <button type="submit">Excluir</button>               
+                </form>
             </div>
         </div>
-
+    {{/each}}
     </div>
 </section>

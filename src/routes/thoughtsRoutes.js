@@ -6,19 +6,16 @@ const router = express.Router();
 
 router.get("/thoughts/dashboard", ThoughtsController.dashboard);
 
+// Rota responsável por redirecionar para página de cadastrar o pensamento
+router.get("/thoughts-create", ThoughtsController.registerThought);
+
 //Rota para CADASTRAR um pensamento no banco.
-router.post("/thoughts", ThoughtsController.createThought);
+router.post("/thoughts/create", ThoughtsController.createThought);
 
-//Rota para MOSTRAR TODOS os pensamento cadastrados.
-router.get("/thoughts", ThoughtsController.findAllThoughts);
-
-//Rota para MOSTRAR APENAS UM pensamento cadastrado escolhido pelo id.
-router.get("/thoughts/:id", ThoughtsController.findThoughts);
-
-//Rota para ATUALIZAR um pensamento cadastrado escolhido pelo id.
-router.put("/thoughts/:id", ThoughtsController.updateThoughts)
+router.get("/thoughts/edit/:id", ThoughtsController.showPageEditThought);
+router.post("/thoughts/update/:id", ThoughtsController.updateThoughts);
 
 //Rota para DELETAR um pensamento cadastrado escolhido pelo id.
-router.delete("/thoughts/:id", ThoughtsController.deleteThoughts);
+router.post("/thoughts/remove/:id", ThoughtsController.deleteThoughts);
 
 module.exports = router;
